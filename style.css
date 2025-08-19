@@ -1,0 +1,718 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added for better sizing control */
+}
+
+/* General responsive additions */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe {
+    max-width: 100%;
+    aspect-ratio: 16 / 9; /* Maintains YouTube aspect ratio */
+    height: auto;
+}
+
+/* CSS for header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensures header stays on top */
+}
+
+/* CSS for logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img:first-child {
+    width: 80px; /* Reduced for smaller screens, will adjust in media */
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo img:nth-child(2) {
+    width: 120px;
+    height: auto;
+}
+
+/* CSS for navbar */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 1.2rem; /* Using rem for scalability */
+    color: #012143;
+}
+
+.navbar li {
+    margin-right: 15px; /* Adjusted spacing */
+}
+
+.navbar li a {
+    text-decoration: none;
+    padding: 8px 12px;
+    color: #23066c;
+}
+
+.navbar li a:hover {
+    color: white;
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* CSS for search bar */
+.searchbar {
+    display: flex;
+}
+
+.searchbar input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 150px; /* Flexible width */
+}
+
+.searchbar button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* CSS for main section */
+main {
+    padding-top: 100px; /* Adjusted for fixed header */
+}
+
+/* CSS for welcome section */
+.welcome-section {
+    background-color: #e8dddd;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.poster {
+    max-width: 90%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.poster h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: red;
+}
+
+.slogan {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; /* Allow auto width */
+}
+
+button:hover {
+    background-color: red;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Mission section CSS */
+.mission-section {
+    background-color: #f0f0f0;
+    padding: 40px 20px;
+}
+
+.mission-section p:first-child {
+    font-size: 2.2rem;
+    text-align: center;
+    color: red;
+}
+
+.mission-section p:nth-child(2) {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* CSS for safety issue section */
+.safety-issue-section {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.safety-issue-content {
+    text-align: center;
+}
+
+.safety-issue-content p {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.safety-issue-content p:first-child {
+    color: red;
+    font-size: 1.8rem;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.button-container button {
+    font-size: 1rem;
+    padding: 12px 20px;
+    background-color: #8091a4;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    flex: 1 1 200px; /* Grow but min 200px */
+    max-width: 300px;
+}
+
+.button-container button:hover {
+    background-color: red;
+}
+
+/* Cyber card section */
+.cyber-card-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.cyber-card-tips {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.cyber-card-tips button:hover {
+    background-color: red;
+}
+
+.cyber-card-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.cyber-card {
+    display: flex;
+    align-items: center;
+    width: calc(33.33% - 20px);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cyber-card-img img {
+    height: 100px;
+    width: auto;
+    padding-right: 15px;
+}
+
+.cyber-card-content button {
+    padding: 8px 15px;
+    color: red;
+    background-color: transparent;
+    border: 1px solid red;
+}
+
+.cyber-card-content button:hover {
+    color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Know more button CSS */
+.know-more-button {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.know-more-text {
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #d0d7df;
+}
+
+.know-more-text h1 {
+    font-size: 2rem;
+}
+
+.know-more-text h2 {
+    font-size: 1.5rem;
+}
+
+.know-more-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.know-more-image img {
+    flex: 1;
+    max-width: 50%;
+    box-shadow: 10px 10px 20px 5px black;
+}
+
+/* Event card section */
+.event-card-section {
+    background-color: white;
+    padding: 20px;
+}
+
+.event-card-tips p {
+    font-size: 1.8rem;
+    color: red;
+    padding: 20px;
+}
+
+.event-card-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.event-card {
+    width: calc(33.33% - 20px);
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.event-card-img img {
+    height: 100px;
+    width: auto;
+    padding-right: 15px;
+}
+
+.event-card-content button {
+    padding: 8px 15px;
+    color: red;
+    background-color: transparent;
+    border: 1px solid red;
+}
+
+.event-card-content button:hover {
+    color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Help card section */
+.help-card-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.help-card-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.help-card-videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.help-card-videos iframe {
+    width: calc(33.33% - 20px);
+    min-width: 300px; /* Prevent too small on mobile */
+}
+
+/* CSS for footer */
+.footer {
+    background-color: #1c156c;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1 1 250px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 1.5rem;
+    padding: 0 0 10px 0;
+}
+
+.footer-column p, .footer-column ul {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: red;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Safety issues CSS */
+.issues {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.text-section {
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #d0d7df;
+}
+
+.text-section h1 {
+    font-size: 2rem;
+}
+
+.text-section h2 {
+    font-size: 1.5rem;
+}
+
+.text-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.image-section img {
+    flex: 1;
+    max-width: 50%;
+    box-shadow: 10px 10px 20px 5px black;
+}
+
+.resource {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #b0ccec;
+}
+
+.image-section h1 {
+    font-size: 2rem;
+}
+
+.image-section h2 {
+    font-size: 1.5rem;
+}
+
+.image-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Contact CSS */
+.contact {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact h1 {
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Large tablets/small desktops (max 1024px) */
+@media (max-width: 1024px) {
+    .logo img:first-child {
+        width: 70px;
+    }
+    .logo img:nth-child(2) {
+        width: 100px;
+    }
+    .navbar ul {
+        font-size: 1rem;
+    }
+    .poster h1 {
+        font-size: 2rem;
+    }
+    .slogan {
+        font-size: 1.5rem;
+    }
+    .mission-section p:first-child {
+        font-size: 2rem;
+    }
+    .mission-section p:nth-child(2) {
+        font-size: 1.3rem;
+    }
+    .cyber-card {
+        width: calc(50% - 20px);
+    }
+    .event-card {
+        width: calc(50% - 20px);
+    }
+    .help-card-videos iframe {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Tablets (max 768px) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .navbar li {
+        margin-right: 0;
+    }
+    .searchbar {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+    .searchbar input[type="text"] {
+        width: 70%;
+    }
+    main {
+        padding-top: 150px; /* Adjust for stacked header */
+    }
+    .welcome-section {
+        padding: 30px 15px;
+    }
+    .buttons-container button {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .safety-issue-content p {
+        font-size: 1.5rem;
+    }
+    .button-container button {
+        flex: 1 1 45%;
+        max-width: none;
+    }
+    .cyber-card-tips {
+        flex-direction: column;
+        font-size: 1.8rem;
+    }
+    .cyber-card-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cyber-card {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .cyber-card-img img {
+        padding-right: 0;
+        padding-bottom: 10px;
+    }
+    .know-more-button {
+        flex-direction: column;
+    }
+    .know-more-image img {
+        max-width: 100%;
+    }
+    .event-card-tips p {
+        font-size: 1.5rem;
+    }
+    .event-card-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .event-card {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .event-card-img img {
+        padding-right: 0;
+        padding-bottom: 10px;
+    }
+    .help-card-text {
+        flex-direction: column;
+        font-size: 1.8rem;
+    }
+    .help-card-videos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .help-card-videos iframe {
+        width: 100%;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .issues {
+        flex-direction: column;
+    }
+    .image-section img {
+        max-width: 100%;
+    }
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Mobile phones (max 480px) */
+@media (max-width: 480px) {
+    .logo img:first-child {
+        width: 50px;
+    }
+    .logo img:nth-child(2) {
+        width: 80px;
+    }
+    .navbar ul {
+        font-size: 0.9rem;
+    }
+    .searchbar input[type="text"] {
+        width: 60%;
+        font-size: 0.9rem;
+    }
+    .searchbar button {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+    .poster h1 {
+        font-size: 1.8rem;
+    }
+    .slogan {
+        font-size: 1.2rem;
+    }
+    button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+    .mission-section p:first-child {
+        font-size: 1.8rem;
+    }
+    .mission-section p:nth-child(2) {
+        font-size: 1.1rem;
+    }
+    .safety-issue-content p {
+        font-size: 1.2rem;
+    }
+    .button-container button {
+        flex: 1 1 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    .cyber-card-tips {
+        font-size: 1.5rem;
+    }
+    .event-card-tips p {
+        font-size: 1.2rem;
+    }
+    .help-card-text p {
+        font-size: 1.5rem;
+    }
+    .footer-column h3 {
+        font-size: 1.2rem;
+    }
+    .footer-column p, .footer-column ul li {
+        font-size: 0.9rem;
+    }
+    .text-section h1, .image-section h1 {
+        font-size: 1.5rem;
+    }
+    .text-section h2, .image-section h2 {
+        font-size: 1.2rem;
+    }
+    .text-section p, .image-section p {
+        font-size: 1rem;
+    }
+    .contact h1 {
+        font-size: 1.5rem;
+    }
+    .contact p {
+        font-size: 1rem;
+    }
+}
